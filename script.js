@@ -6,6 +6,7 @@ const snake=[{
 },{
     x:1,y:4
 }];
+let direction="right";
 document.addEventListener('DOMContentLoaded', () => { //this wait until the entire html page is loaded
     const board = document.querySelector('.board');
     const blockHeight = 50;
@@ -34,3 +35,18 @@ function render(){
         blocks[`${segment.x}-${segment.y}`].classList.add("fill");
     });
 }
+setInterval(()=>{
+    let head=null;
+    if(direction === "left"){
+        head={x:snake[0].x, y:snake[0].y-1};
+    }
+    if(direction === "right"){
+        head={x:snake[0].x, y:snake[0].y+1};
+    }
+    snake.forEach(segment=>{
+        blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
+    })
+    snake.unshift(head);
+    snake.pop();
+    render();
+},400);
