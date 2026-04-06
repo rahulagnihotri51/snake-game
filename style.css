@@ -9,7 +9,8 @@ html,body{
 }
 :root{
     --bg-primary-color:rgb(64,64,209);
-    --text-primary-color:#f0f0f0;
+    --text-primary-color:#ffffff;
+    --bg-fill-color:#fdfdfd;
 
     --space-xs:4px;
     --space-sm:8px;
@@ -65,4 +66,7 @@ section .infos{
 }
 .blocks{
     border:1px solid var(--border-primary-colors);
+}
+.fill{
+    background-color:var(--bg-fill-color);
 }
