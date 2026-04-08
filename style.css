@@ -47,6 +47,16 @@ section{
     height: 100%;
     gap:var(--space-lg);
 }
+.btn{
+    padding:var(--border-radius-sm) var(--border-radius-md);
+    border-radius: var(--border-radius-2xl);
+    transition: all 0.3s ease;
+    cursor:pointer;
+    border:none;
+}
+.btn:hover{
+    transform:scale(1.1);
+}
 section .infos{
     width:100%;
     display:flex;
@@ -74,4 +84,22 @@ section .infos{
 }
 .food{
     background-color:var(--bg-food-color);
+}
+.modal{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    backdrop-filter:blur(5px);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary-color);
+}
+.modal .start-game{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:var(--border-radius-md);
+    border-radius:var(--border-radius-lg);
 }

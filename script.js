@@ -7,6 +7,8 @@ let intervalId=null;
 let rows=0;
 let cols=0;
 let food={x:Math.floor(Math.random() * rows),y: Math.floor(Math.random() * cols)};
+const startButton=document.querySelector('.btn-start');
+const modal=document.querySelector('.modal');
 document.addEventListener('DOMContentLoaded', () => { //this wait until the entire html page is loaded
     const board = document.querySelector('.board');
     const blockHeight = 50;
@@ -67,9 +69,16 @@ function render(){
         blocks[`${segment.x}-${segment.y}`].classList.add("fill");
     });
 }
-intervalId = setInterval(()=>{
-    render();
-},300);
+// intervalId = setInterval(()=>{
+//     render();
+// },300);
+
+startButton.addEventListener("click",()=>{
+    modal.style.display="none";
+    intervalId= setInterval(()=>{
+        render();
+    },300);
+});
 
 addEventListener("keydown",(event)=>{
     if(event.key==="ArrowUp"){
