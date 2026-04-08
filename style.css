@@ -11,6 +11,7 @@ html,body{
     --bg-primary-color:rgb(64,64,209);
     --text-primary-color:#ffffff;
     --bg-fill-color:#009e3a;
+    --bg-food-color:red;
 
     --space-xs:4px;
     --space-sm:8px;
@@ -69,4 +70,7 @@ section .infos{
 }
 .fill{
     background-color:var(--bg-fill-color);
+}
+.food{
+    background-color:var(--bg-food-color);
 }
