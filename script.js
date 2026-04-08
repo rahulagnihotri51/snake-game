@@ -56,6 +56,7 @@ function render(){
             x:Math.floor(Math.random()*rows),y:Math.floor(Math.random()*cols)
         };
         blocks[`${food.x}-${food.y}`].classList.add("food");
+        snake.unshift(head);
     }
     snake.forEach(segment=>{
         blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
@@ -68,7 +69,7 @@ function render(){
 }
 intervalId = setInterval(()=>{
     render();
-},400);
+},300);
 
 addEventListener("keydown",(event)=>{
     if(event.key==="ArrowUp"){

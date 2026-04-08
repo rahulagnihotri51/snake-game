@@ -8,10 +8,10 @@ html,body{
     height:100%;
 }
 :root{
-    --bg-primary-color:rgb(64,64,209);
-    --text-primary-color:#ffffff;
-    --bg-fill-color:#009e3a;
-    --bg-food-color:red;
+    --bg-primary-color:#0a0e27;
+    --text-primary-color:#e8e8ff;
+    --bg-fill-color:#ffd700;
+    --bg-food-color:#ff6b6b;
 
     --space-xs:4px;
     --space-sm:8px;
@@ -21,7 +21,7 @@ html,body{
     --space-2xl:40px;
     --space-4xl:48px;
 
-    --border-primary-colors:white;
+    --border-primary-colors:#3d3d7a;
 
     --border-radius-xs:4px;
     --border-radius-sm:8px;
@@ -70,6 +70,7 @@ section .infos{
 }
 .fill{
     background-color:var(--bg-fill-color);
+    border-radius: var(--border-radius-lg);
 }
 .food{
     background-color:var(--bg-food-color);
