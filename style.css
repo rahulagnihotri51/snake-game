@@ -54,6 +54,11 @@ section{
     cursor:pointer;
     border:none;
 }
+.btn-start{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .btn:hover{
     transform:scale(1.1);
 }
@@ -102,4 +107,14 @@ section .infos{
     align-items: center;
     gap:var(--border-radius-md);
     border-radius:var(--border-radius-lg);
+}
+.modal .game-over{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:var(--border-radius-md);
+    border-radius:var(--border-radius-lg);
+}
+.modal .game-over{
+    display:none;
 }
